@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">one-dark-pro-ssms</h1>
+  <h1 align="center">One Dark Pro (SSMS)</h1>
   <p align="center">One Dark Pro theme for SQL Server Management Studio 22 (unofficial port)</p>
   <a href="https://learn.microsoft.com/ssms/"><img src="https://img.shields.io/badge/SSMS-22-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white" alt="SSMS 22" /></a>
   <a href="https://github.com/Binaryify/OneDark-Pro"><img src="https://img.shields.io/badge/based_on-One_Dark_Pro-61AFEF?style=flat-square&logo=atom&logoColor=white" alt="Based on One Dark Pro" /></a>
