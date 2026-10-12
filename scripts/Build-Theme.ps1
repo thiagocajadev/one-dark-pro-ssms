@@ -8,7 +8,7 @@ param(
 )
 
 . "$PSScriptRoot\ThemeTool.ps1"
-. "$PSScriptRoot\..\Ssms.ps1"
+. "$PSScriptRoot\Ssms.ps1"
 
 if (-not $SsmsIde) { $SsmsIde = Find-SsmsIde }
 $Output = [IO.Path]::GetFullPath($Output)

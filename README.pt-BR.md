@@ -8,10 +8,10 @@ Não tem relação com o autor original: dúvidas e problemas deste port ficam a
 
 ## Instalar
 
-Clique com o botão direito em `Install.ps1` → **Executar com o PowerShell** (vai pedir administrador).
+Clique com o botão direito em `scripts\Install.ps1` → **Executar com o PowerShell** (vai pedir administrador).
 Depois, no SSMS: **Tools → Options → Environment → Visual Experience → One Dark Pro (SSMS)**.
 
-Para remover: `Uninstall.ps1`.
+Para remover: `scripts\Uninstall.ps1`.
 
 ## Fonte e zoom recomendados
 
@@ -30,8 +30,8 @@ O tema só cuida das cores; a fonte e o zoom completam o visual:
 Se alguma parte voltar a ficar cinza/preta, a atualização trouxe cores novas. Regere o tema e reinstale:
 
 ```powershell
-.\generator\Build-Theme.ps1
-.\Install.ps1
+.\scripts\Build-Theme.ps1
+.\scripts\Install.ps1
 ```
 
 ## O que tem aqui
@@ -39,11 +39,11 @@ Se alguma parte voltar a ficar cinza/preta, a atualização trouxe cores novas. 
 | Arquivo | Para quê |
 |---|---|
 | `one-dark-pro-ssms.pkgdef` | O tema pronto para o SSMS 22 |
-| `Install.ps1` / `Uninstall.ps1` | Copiam/removem o tema na pasta `Common7\IDE\Extensions\one-dark-pro-ssms` do SSMS |
-| `Ssms.ps1` | Funções comuns (acha o SSMS pelo `vswhere`, pede administrador) |
 | `original/OneDark-Pro.vs.pkgdef` | Tema original da extensão do Visual Studio (base do gerador) |
-| `generator/Build-Theme.ps1` | Monta o tema do SSMS a partir do original |
-| `generator/ThemeTool.ps1` | Lê/escreve o formato binário das cores do `.pkgdef` |
+| `scripts/Install.ps1` / `scripts/Uninstall.ps1` | Copiam/removem o tema na pasta `Common7\IDE\Extensions\one-dark-pro-ssms` do SSMS |
+| `scripts/Build-Theme.ps1` | Monta o tema do SSMS a partir do original |
+| `scripts/ThemeTool.ps1` | Lê/escreve o formato binário das cores do `.pkgdef` |
+| `scripts/Ssms.ps1` | Funções comuns (acha o SSMS pelo `vswhere`, pede administrador) |
 
 ## Por que precisou adaptar
 
@@ -64,7 +64,7 @@ Cores do T-SQL ajustadas (tabela `$overrides` no gerador):
 O tema tem nome (**One Dark Pro (SSMS)**) e GUID próprios (`dbc802a0-5b08-4884-94f5-0754b3d891a8`),
 para não colidir com a extensão original.
 
-> A Microsoft não dá suporte a extensões de terceiros no SSMS. Se algo der errado, `Uninstall.ps1` resolve.
+> A Microsoft não dá suporte a extensões de terceiros no SSMS. Se algo der errado, `scripts\Uninstall.ps1` resolve.
 
 ## Licença
 

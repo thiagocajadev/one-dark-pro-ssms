@@ -7,7 +7,7 @@ if (-not (Test-Administrator)) {
     return
 }
 
-$theme = Join-Path $PSScriptRoot 'one-dark-pro-ssms.pkgdef'
+$theme = Join-Path $PSScriptRoot '..\one-dark-pro-ssms.pkgdef'
 $extensionsFolder = Join-Path (Find-SsmsIde) 'Extensions'
 $themeFolder = Join-Path $extensionsFolder $ThemeFolderName
 

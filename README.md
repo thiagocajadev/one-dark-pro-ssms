@@ -8,10 +8,10 @@ It is not affiliated with the original author: please report issues with this po
 
 ## Install
 
-Right-click `Install.ps1` → **Run with PowerShell** (it asks for administrator rights).
+Right-click `scripts\Install.ps1` → **Run with PowerShell** (it asks for administrator rights).
 Then, in SSMS: **Tools → Options → Environment → Visual Experience → One Dark Pro (SSMS)**.
 
-To remove it, run `Uninstall.ps1`.
+To remove it, run `scripts\Uninstall.ps1`.
 
 ## Recommended font and zoom
 
@@ -29,8 +29,8 @@ The theme only handles colors. Font and zoom complete the look:
 If some area turns gray or black again, the update shipped new colors. Rebuild the theme and reinstall:
 
 ```powershell
-.\generator\Build-Theme.ps1
-.\Install.ps1
+.\scripts\Build-Theme.ps1
+.\scripts\Install.ps1
 ```
 
 ## What's inside
@@ -38,11 +38,11 @@ If some area turns gray or black again, the update shipped new colors. Rebuild t
 | File | Purpose |
 |---|---|
 | `one-dark-pro-ssms.pkgdef` | The ready-to-use theme for SSMS 22 |
-| `Install.ps1` / `Uninstall.ps1` | Copy/remove the theme in SSMS's `Common7\IDE\Extensions\one-dark-pro-ssms` folder |
-| `Ssms.ps1` | Shared helpers (finds SSMS through `vswhere`, elevates to administrator) |
 | `original/OneDark-Pro.vs.pkgdef` | Original theme from the Visual Studio extension (generator input) |
-| `generator/Build-Theme.ps1` | Builds the SSMS theme from the original one |
-| `generator/ThemeTool.ps1` | Reads/writes the binary color format inside `.pkgdef` files |
+| `scripts/Install.ps1` / `scripts/Uninstall.ps1` | Copy/remove the theme in SSMS's `Common7\IDE\Extensions\one-dark-pro-ssms` folder |
+| `scripts/Build-Theme.ps1` | Builds the SSMS theme from the original one |
+| `scripts/ThemeTool.ps1` | Reads/writes the binary color format inside `.pkgdef` files |
+| `scripts/Ssms.ps1` | Shared helpers (finds SSMS through `vswhere`, elevates to administrator) |
 
 ## Why it needed a port
 
@@ -63,7 +63,7 @@ T-SQL colors tuned in the `$overrides` table of the generator:
 The theme has its own name (**One Dark Pro (SSMS)**) and GUID (`dbc802a0-5b08-4884-94f5-0754b3d891a8`),
 so it never collides with the original extension.
 
-> Microsoft doesn't support third-party extensions in SSMS. If anything goes wrong, `Uninstall.ps1` reverts it.
+> Microsoft doesn't support third-party extensions in SSMS. If anything goes wrong, `scripts\Uninstall.ps1` reverts it.
 
 ## License
 
