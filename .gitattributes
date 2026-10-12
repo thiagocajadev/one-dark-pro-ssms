@@ -2,4 +2,7 @@
 
 # Windows tooling: keep CRLF regardless of the cloning machine
 *.ps1    text eol=crlf
+*.cmd    text eol=crlf
 *.pkgdef text eol=crlf
+
+*.png binary
